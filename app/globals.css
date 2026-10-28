@@ -1,26 +1,81 @@
 @import "tailwindcss";
 
+@theme {
+  --color-primary-teal: #063F3F;
+  --color-sidebar-teal: #064747;
+  --color-sidebar-hover: #085252;
+  --color-sidebar-active: #0B5C5C;
+  --color-sidebar-border: #0A5555;
+  --color-main-bg: #F3F9F7;
+  --color-card-bg: #FFFFFF;
+  --color-accent-primary: #22C55E;
+  --color-accent-hover: #16A34A;
+  --color-accent-soft: #DDF4E9;
+  --color-text-main: #102A2A;
+  --color-text-secondary: #6B7F7F;
+  --color-text-muted: #8E9F9F;
+  --color-border-subtle: #E2ECE9;
+  --color-border-card: #E5EDE9;
+
+  /* Semantic Colors */
+  --color-status-success: #22C55E;
+  --color-status-success-bg: #DDF4E9;
+  --color-status-success-text: #15803D;
+
+  --color-status-warning: #F97316;
+  --color-status-warning-bg: #FFEDD5;
+  --color-status-warning-text: #C2410C;
+
+  --color-status-urgent: #EF4444;
+  --color-status-urgent-bg: #FEE2E2;
+  --color-status-urgent-text: #B91C1C;
+
+  --color-status-active: #0D9488;
+  --color-status-active-bg: #CCFBF1;
+  --color-status-active-text: #0F766E;
+
+  --color-status-neutral: #64748B;
+  --color-status-neutral-bg: #F1F5F9;
+  --color-status-neutral-text: #475569;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --background: #F3F9F7;
+  --foreground: #102A2A;
 }
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94A3B8;
+}
+
+/* Sidebar scrollbar */
+.sidebar-scroll::-webkit-scrollbar {
+  width: 4px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+.sidebar-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.35);
 }
