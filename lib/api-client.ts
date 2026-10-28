@@ -4,7 +4,7 @@
  */
 
 const API_BASE_URL =
-  process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api';
+  process.env.NEXT_PUBLIC_API_URL || 'https://ticket-management-system-backend-1-cww1.onrender.com/api';
 
 const TOKEN_KEY = 'ticketgo_access_token';
 
