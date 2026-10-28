@@ -84,9 +84,7 @@ export const Sidebar = ({
                   <span className="font-bold text-base tracking-tight text-white">
                     Ticket<span className="text-[#22C55E]">Go</span>
                   </span>
-                  <span className="text-[10px] uppercase font-mono px-1.5 py-0.2 bg-[#063F3F] text-[#22C55E] rounded font-semibold border border-[#0A5555]">
-                    SaaS
-                  </span>
+
                 </div>
                 <span className="text-[10px] text-[#A3B8B8] font-medium tracking-wide">
                   Enterprise Desk
